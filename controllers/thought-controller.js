@@ -22,7 +22,7 @@ const thoughtController = {
         }
     },
 
-    async createThought() {
+    async createThought(req, res) {
         try {
             const thought = await Thought.create(req.body);
             res.status(201).json(thought);
